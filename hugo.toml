@@ -1,0 +1,4 @@
+baseURL = 'https://amirsahrani.nl/'
+languageCode = 'en-us'
+title = 'Amir Sahrani'
+theme = 'hugo-theme-stack'
