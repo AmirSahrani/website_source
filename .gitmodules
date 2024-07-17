@@ -6,6 +6,6 @@
     path = themes//hugo-theme-stack
     url = https://github.com/CaiJimmy/hugo-theme-stack
 
-[submodule "themes/hugo-theme-stack"]
+[submodule "themes//hugo-theme-stack"]
     path = public//themes//hugo-theme-stack
     url = https://github.com/CaiJimmy/hugo-theme-stack
