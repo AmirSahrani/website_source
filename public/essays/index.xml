@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Essays on Amir Sahrani</title>
+        <link>http://localhost:1313/essays/</link>
+        <description>Recent content in Essays on Amir Sahrani</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 16 Jul 2024 11:42:59 +0200</lastBuildDate><atom:link href="http://localhost:1313/essays/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Essays</title>
+        <link>http://localhost:1313/essays/essays/</link>
+        <pubDate>Tue, 16 Jul 2024 11:42:59 +0200</pubDate>
+        
+        <guid>http://localhost:1313/essays/essays/</guid>
+        <description>&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;../../writing/Amplification.md&#34; &gt;The Case against self Amplification&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;An essay on how people become caricatures of themselves.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

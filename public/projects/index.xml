@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Projects on Amir Sahrani</title>
+        <link>http://localhost:1313/projects/</link>
+        <description>Recent content in Projects on Amir Sahrani</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 14 Jan 2024 07:07:07 +0100</lastBuildDate><atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Projects</title>
+        <link>http://localhost:1313/projects/projects/</link>
+        <pubDate>Sun, 14 Jan 2024 07:07:07 +0100</pubDate>
+        
+        <guid>http://localhost:1313/projects/projects/</guid>
+        <description>&lt;h2 id=&#34;bachelor-thesis&#34;&gt;Bachelor Thesis
+&lt;/h2&gt;&lt;p&gt;During my thesis we collected around 300.000 sample cointosses which we used to verify a theoretical results form dr. Diaconis. We found positive results, suggesting a bias, where the coin is more likely to land on the same face it originally rested on.&lt;/p&gt;
+&lt;h2 id=&#34;mechanistic-interpretability-of-transformers&#34;&gt;Mechanistic Interpretability of Transformers
+&lt;/h2&gt;&lt;p&gt;I investigate a transformer trained on the task of sorting. With the use of the local learning coefficient, the complexity of the model was estimated. The model was found to perform most computation in the first layer, after which the subsequence layers &amp;lsquo;refined the input&amp;rsquo;  &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

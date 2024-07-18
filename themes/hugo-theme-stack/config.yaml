@@ -5,11 +5,12 @@ module:
 
 params:
     mainSections:
-        - post
+        - gallery
+        - essays
+        - projects
     featuredImageField: image
     rssFullContent: true
-    favicon:
-
+    favicon: /favicon.ico
     footer:
         since:
         customText:
@@ -25,7 +26,7 @@ params:
         avatar:
             enabled: true
             local: true
-            src: img/avatar.png
+            src: img/avatar.jpg
 
     article:
         headingAnchor: false
