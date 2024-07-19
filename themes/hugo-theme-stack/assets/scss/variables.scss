@@ -40,11 +40,12 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
 *   Global font family
 */
 :root {
-    --sys-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Droid Sans", "Helvetica Neue";
+    --article-font-family: "Merriweather", var(--base-font-family);
+    --sys-font-family: "Merriweather", var(--base-font-family);
+    --base-font-family: "Merriweather", var(--base-font-family);
     --zh-font-family: "PingFang SC", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei";
 
-    --base-font-family: "Lato", var(--sys-font-family), var(--zh-font-family), sans-serif;
-    --code-font-family: Menlo, Monaco, Consolas, "Courier New", var(--zh-font-family), monospace;
+    --code-font-family: "Courier New", var(--zh-font-family), monospace;
 }
 
 /*

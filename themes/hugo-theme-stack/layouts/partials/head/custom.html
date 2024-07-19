@@ -1,0 +1,21 @@
+<style>
+    /* Overwrite CSS variable */
+    :root {
+        --article-font-family: "Merriweather", var(--base-font-family);
+        --sys-font-family: "Merriweather", var(--base-font-family);
+        --base-font-family: "Merriweather", var(--base-font-family);
+        --code-font-family: Menlo, Monaco, Consolas, "Courier New", var(--zh-font-family), monospace;
+    }
+</style>
+
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap";
+    
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+    
+        document.head.appendChild(customFont);
+    }());
+</script>

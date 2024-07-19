@@ -50,7 +50,7 @@ params:
 
     sidebar:
         emoji: 🍥
-        subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        subtitle: Testing
         avatar:
             enabled: true
             local: true

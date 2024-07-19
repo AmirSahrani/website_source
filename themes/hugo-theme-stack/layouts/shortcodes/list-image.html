@@ -1,0 +1,43 @@
+{{ $folder := .Get "folder" }}
+{{ $images := readDir (printf "static/%s" $folder) }}
+
+<!-- layouts/shortcodes/listimages.html -->
+<style>
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+  }
+  .image-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .image-grid img.wide {
+    grid-column: span 2;
+  }
+</style>
+
+{{ $folder := .Get "folder" }}
+{{ $images := readDir (printf "static/%s" $folder) }}
+
+<div class="image-grid">
+{{ range $images }}
+  {{ if and (not .IsDir) (or (strings.HasSuffix .Name ".jpg") (strings.HasSuffix .Name ".jpeg") (strings.HasSuffix .Name ".png") (strings.HasSuffix .Name ".gif")) }}
+    <img src="/{{ $folder }}/{{ .Name }}" alt="{{ .Name }}" class="image">
+  {{ end }}
+{{ end }}
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll('.image-grid img');
+    images.forEach(image => {
+      image.onload = () => {
+        if (image.naturalWidth > image.naturalHeight) {
+          image.classList.add('wide');
+        }
+      };
+    });
+  });
+</script>

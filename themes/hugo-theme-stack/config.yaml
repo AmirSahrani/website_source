@@ -21,12 +21,16 @@ params:
 
     sidebar:
         compact: false
-        emoji:
-        subtitle:
+        emoji: 
+        subtitle: |
+          Hello! I am a computational science student, with a bachelor in psychology. I am interested in AI-safety and things nerds generally like.
+          
+         
+        
         avatar:
             enabled: true
             local: true
-            src: img/avatar.jpg
+            src: img/avatar_cropped.jpg
 
     article:
         headingAnchor: false
@@ -123,12 +127,12 @@ params:
         page: []
 
     opengraph:
-        twitter:
-            # Your Twitter username
-            site:
-
-            # Available values: summary, summary_large_image
-            card: summary_large_image
+        # twitter:
+        #     # Your Twitter username
+        #     site:
+        #
+        #     # Available values: summary, summary_large_image
+        #     card: summary_large_image
 
     defaultImage:
         opengraph:
