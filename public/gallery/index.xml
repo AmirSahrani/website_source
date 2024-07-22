@@ -20,20 +20,14 @@
 &lt;style&gt;
   .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);  
+    gap: 10
   }
   .image-grid img {
-    width: 100%;
-    height: auto;
+    height: 200px;  
     object-fit: cover;
     cursor: pointer;
   }
-  .image-grid img.wide {
-    grid-column: span 2;
-  }
-
-   
   .modal {
     display: none; 
     position: fixed; 
@@ -68,33 +62,30 @@
   }
 &lt;/style&gt;
 
-
-
-
 &lt;div class=&#34;image-grid&#34;&gt;
 
   
-    &lt;img src=&#34;http://localhost:1313/color/Corner%20stone%20inverted.jpg&#34; alt=&#34;Corner stone inverted.jpg&#34; class=&#34;image&#34; data-src=&#34;http://localhost:1313/color/Corner%20stone%20inverted.jpg&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/color/Corner%20stone%20inverted.jpg&#34; alt=&#34;Corner stone inverted.jpg&#34; class=&#34;image&#34;&gt;
   
 
   
-    &lt;img src=&#34;http://localhost:1313/color/HONDA.jpg&#34; alt=&#34;HONDA.jpg&#34; class=&#34;image&#34; data-src=&#34;http://localhost:1313/color/HONDA.jpg&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/color/HONDA.jpg&#34; alt=&#34;HONDA.jpg&#34; class=&#34;image&#34;&gt;
   
 
   
-    &lt;img src=&#34;http://localhost:1313/color/Huisje%20in%20Riven.jpg&#34; alt=&#34;Huisje in Riven.jpg&#34; class=&#34;image&#34; data-src=&#34;http://localhost:1313/color/Huisje%20in%20Riven.jpg&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/color/Huisje%20in%20Riven.jpg&#34; alt=&#34;Huisje in Riven.jpg&#34; class=&#34;image&#34;&gt;
   
 
   
-    &lt;img src=&#34;http://localhost:1313/color/Old%20Red%20lights.jpg&#34; alt=&#34;Old Red lights.jpg&#34; class=&#34;image&#34; data-src=&#34;http://localhost:1313/color/Old%20Red%20lights.jpg&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/color/Old%20Red%20lights.jpg&#34; alt=&#34;Old Red lights.jpg&#34; class=&#34;image&#34;&gt;
   
 
   
-    &lt;img src=&#34;http://localhost:1313/color/Retro%20gebouw.jpg&#34; alt=&#34;Retro gebouw.jpg&#34; class=&#34;image&#34; data-src=&#34;http://localhost:1313/color/Retro%20gebouw.jpg&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/color/Retro%20gebouw.jpg&#34; alt=&#34;Retro gebouw.jpg&#34; class=&#34;image&#34;&gt;
   
 
   
-    &lt;img src=&#34;http://localhost:1313/color/Station%20after%20dark.jpg&#34; alt=&#34;Station after dark.jpg&#34; class=&#34;image&#34; data-src=&#34;http://localhost:1313/color/Station%20after%20dark.jpg&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/color/Station%20after%20dark.jpg&#34; alt=&#34;Station after dark.jpg&#34; class=&#34;image&#34;&gt;
   
 
 &lt;/div&gt;
@@ -138,20 +129,14 @@
 &lt;style&gt;
   .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);  
+    gap: 10
   }
   .image-grid img {
-    width: 100%;
-    height: auto;
+    height: 200px;  
     object-fit: cover;
     cursor: pointer;
   }
-  .image-grid img.wide {
-    grid-column: span 2;
-  }
-
-   
   .modal {
     display: none; 
     position: fixed; 
@@ -186,37 +171,30 @@
   }
 &lt;/style&gt;
 
-
-
-
 &lt;div class=&#34;image-grid&#34;&gt;
 
   
-    &lt;img src=&#34;http://localhost:1313/dark/Bewaking%20onder%20licht.jpg&#34; alt=&#34;Bewaking onder licht.jpg&#34; class=&#34;image&#34; data-src=&#34;http://localhost:1313/dark/Bewaking%20onder%20licht.jpg&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/dark/DSC07828.jpg&#34; alt=&#34;DSC07828.jpg&#34; class=&#34;image&#34;&gt;
   
 
   
-    &lt;img src=&#34;http://localhost:1313/dark/DSC07828.jpg&#34; alt=&#34;DSC07828.jpg&#34; class=&#34;image&#34; data-src=&#34;http://localhost:1313/dark/DSC07828.jpg&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/dark/Don%27t%20Look%20At%20me.jpg&#34; alt=&#34;Don&amp;#39;t Look At me.jpg&#34; class=&#34;image&#34;&gt;
   
 
   
-    &lt;img src=&#34;http://localhost:1313/dark/Don%27t%20Look%20At%20me.jpg&#34; alt=&#34;Don&amp;#39;t Look At me.jpg&#34; class=&#34;image&#34; data-src=&#34;http://localhost:1313/dark/Don%27t%20Look%20At%20me.jpg&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/dark/LivingTree.jpg&#34; alt=&#34;LivingTree.jpg&#34; class=&#34;image&#34;&gt;
   
 
   
-    &lt;img src=&#34;http://localhost:1313/dark/LivingTree.jpg&#34; alt=&#34;LivingTree.jpg&#34; class=&#34;image&#34; data-src=&#34;http://localhost:1313/dark/LivingTree.jpg&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/dark/Metro.jpg&#34; alt=&#34;Metro.jpg&#34; class=&#34;image&#34;&gt;
   
 
   
-    &lt;img src=&#34;http://localhost:1313/dark/Metro.jpg&#34; alt=&#34;Metro.jpg&#34; class=&#34;image&#34; data-src=&#34;http://localhost:1313/dark/Metro.jpg&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/dark/Misty%20days.jpg&#34; alt=&#34;Misty days.jpg&#34; class=&#34;image&#34;&gt;
   
 
   
-    &lt;img src=&#34;http://localhost:1313/dark/Misty%20days.jpg&#34; alt=&#34;Misty days.jpg&#34; class=&#34;image&#34; data-src=&#34;http://localhost:1313/dark/Misty%20days.jpg&#34;&gt;
-  
-
-  
-    &lt;img src=&#34;http://localhost:1313/dark/Red%20light.jpg&#34; alt=&#34;Red light.jpg&#34; class=&#34;image&#34; data-src=&#34;http://localhost:1313/dark/Red%20light.jpg&#34;&gt;
+    &lt;img src=&#34;http://localhost:1313/dark/Red%20light.jpg&#34; alt=&#34;Red light.jpg&#34; class=&#34;image&#34;&gt;
   
 
 &lt;/div&gt;
