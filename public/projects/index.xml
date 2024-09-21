@@ -14,7 +14,7 @@
         <guid>http://localhost:1313/projects/projects/</guid>
         <description>&lt;h2 id=&#34;bachelor-thesis&#34;&gt;Bachelor Thesis
 &lt;/h2&gt;&lt;p&gt;During my thesis we collected around 300.000 sample cointosses which we used to verify a theoretical results form dr. Diaconis. We found positive results, suggesting a bias, where the coin is more likely to land on the same face it originally rested on.&lt;/p&gt;
-&lt;h2 id=&#34;mechanistic-interpretability-of-transformerssorting_transformerspdf&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;./Sorting_Transformers.pdf&#34; &gt;Mechanistic Interpretability of Transformers&lt;/a&gt;
+&lt;h2 id=&#34;mechanistic-interpretability-of-transformerssorting_transformerspdf&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;../Sorting_Transformers.pdf&#34; &gt;Mechanistic Interpretability of Transformers&lt;/a&gt;
 &lt;/h2&gt;&lt;p&gt;I investigate a transformer trained on the task of sorting. With the use of the local learning coefficient, the complexity of the model was estimated. The model was found to perform most computation in the first layer, after which the subsequence layers &amp;lsquo;refined the input&amp;rsquo;  &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
         </item>
