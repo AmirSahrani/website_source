@@ -37,6 +37,10 @@ p {
     margin-bottom: 35px;
 }
 
+.description {
+    border-left : 6px #40826d;
+}
+
 a:link{
     color: #100c08;
     text-decoration: underline; 
