@@ -1,0 +1,101 @@
+body {
+    width: 480px;
+    margin: auto;
+    position: relative;
+    padding: 0 20px;
+    background: #f0f0f0 ;
+    color: #100c08;
+    font-size: 20px;
+    line-height: 22px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+
+}
+h1 {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    font-size: 30px;
+    color : #40826d;
+    transition: all 0.2s;
+}
+
+h1:hover {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    font-size: 30px;
+    color : #bf7d92;
+    transition: all 0.2s;
+}
+h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    color : #40826d;
+}
+p {
+
+    margin-bottom: 35px;
+}
+
+a:link{
+    color: #100c08;
+    text-decoration: underline; 
+    text-decoration-thickness: 2px;
+    text-decoration-color: #40826d;
+    transition: text-decoration-color 0.2s;
+    text-underline-offset: 2px;
+}
+
+a:visited{
+    color: #100c08;
+    text-decoration: underline; 
+    text-decoration-thickness: 2px;
+    text-decoration-color: #40826d;
+    transition: text-decoration-color 0.2s;
+    text-underline-offset: 2px;
+}
+a:hover{
+    color: #100c08;
+    text-decoration: underline; 
+    text-decoration-thickness: 3px;
+    text-decoration-color: #bf7d92;
+    transition: text-decoration-color 0.2s;
+    text-underline-offset: 3px;
+}
+
+.back {
+    border: none;
+    position: absolute;
+    filter: invert(41%) sepia(52%) saturate(337%) hue-rotate(110deg) brightness(97%) contrast(92%);
+    width: 90px;
+    height: 90px;
+    left: -100px;
+    transition: all 0.1s;
+}
+
+.back:hover {
+    border: none;
+    position: absolute;
+    width: 90px;
+    height: 80px;
+    left: -90px;
+    right: -10px;
+    transition: all 0.2s;
+}
+
+.avatar {
+    border: none;
+    position: absolute;
+    background: #73c936;
+    width: 90px;
+    height: 90px;
+    left: -100px;
+    top: -45px;
+    border-radius: 50%;
+}
+
+@media (max-width: 480px){
+    .avatar {
+	display: none;
+    }
+}
