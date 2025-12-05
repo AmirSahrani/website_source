@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><XnView_script version="1.0" name="website_conversion">
+    <Watermark filename="Amir Sahrani" opacity="78" no_alpha="false" position="8" delta_x="0" delta_y="0" perc="100" size="3" perc_mode="0"/>
+    <Resize mode="0" width="800" height="600" unit="0" ratio="true" orientation="false" enlarge="0" resample="10" gamma_correct="false"/>
+    <Output folder="/home/amir/Documents/programming/websites/AmirSahrani/assets/pictures" filename="{Filename}_preview{Width}x{Height}" case="1" startIndex="1" format="">
+        <Options overwrite="1" orgDate="false" keepMeta="true" keepICC="false" keepFolder="false" checkFilesize="false" keepParentFolder="false" keepExtension="false" delOrg="false" multipage="false" allPages="false" openExplorer="true" beep="true" openBrowser="false" clearItems="false"/>
+        <JPEG useJPEGli="false" quality="85" progressive="false" optimizeHuffman="true" rebuildThumb="true" orgQuality="false" DCTMethod="2" subSampling="2" smoothFactor="0"/>
+        <TGA compress="false" bottomUp="false"/>
+        <TIFF compress="3" quality="80" compressBW="6" oneStrip="false"/>
+        <BMP compress="false" hdrOS2="false"/>
+        <PNG level="9" interlaced="false" filter="0"/>
+        <GIF interlaced="false" hdr87a="false"/>
+        <PCX compress="false"/>
+        <WEBP method="0" quality="80" filesize="128" compress="4" strength="60" sharpness="0" preset="0" sharpyuv="false"/>
+        <JPEGLI useJPEGli="true" quality="85" progressive="false" optimizeHuffman="true" rebuildThumb="true" orgQuality="false" DCTMethod="2" subSampling="2" smoothFactor="0" useXYB="false"/>
+        <JP2 mode="0" quality="80" ratio="4" fileSize="100"/>
+        <PDF compress="2" compressGrey="2" compressBW="3" quality="80"/>
+        <JXR quality="80" colorFormat="0" filter="0"/>
+        <JPEGXL quality="80" lossless="true" effort="7"/>
+        <FORMATS_SETTINGS keepEXIF="true" keepICC="true" keepIPTC="true" keepXMP="true"/>
+    </Output>
+</XnView_script>
