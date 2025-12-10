@@ -139,6 +139,13 @@ a:hover{
     text-underline-offset: 3px;
 }
 
+.back-container {
+    position: absolute;
+    width: 100px; /* Fixed width to prevent flickering */
+    height: 60px; /* Fixed height to prevent flickering */
+    left: -100px;
+    display: block;
+}
 .back {
     border: none;
     position: absolute;
