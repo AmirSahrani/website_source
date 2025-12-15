@@ -57,19 +57,31 @@
 	<p>
 		Possible the biggest benefit is the stability of the system. By this I do not mean that updates can't break your system. Instead you simply do not have to worry about this. If you use <a href="https://nixos.wiki/wiki/flakes">nix flakes</a> to manage your package versions and track these files using Git, updating your systems becomes as easy as running 
 
+	</p>
+	
+	<p>
 
 		<code class="block">
 nix flake update
 sudo nixos-rebuild switch --flake /etc/nixos#YOURHOST
 		</code>
+	</p>
+	
+	<p>
 
 		inside your <code>/etc/nixos/</code> folder. If the rebuild
 		fails, or you notice some program somehow stopped working, you
 		simply reset using
+	</p>
+	
+	<p>
 
 		<code class="block">
 git reset flake.lock
 		</code>
+	</p>
+	
+	<p>
 
 		and now your rebuilds will be using the old versions again! 
 	
