@@ -1,38 +1,198 @@
 <head>
-	<link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css"/>
-	<link rel="stylesheet" href="../style.css"/>
-	<link rel="icon" href="../assets/favicon.ico"/>
-	<title>Amir Sahrani</title>
-	
+<link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css"/>
+<link rel="stylesheet" href="../style.css"/>
+<link rel="icon" href="../assets/favicon.ico"/>
+<title>Amir Sahrani</title>
+
 </head> <body> <div> <a href="../blog.html"> <img class="back"
-	src="../assets/backward-arrow-svgrepo-com.svg" alt=""></a> 
-	<h1 class="title" >Learning NixOS</h1>
+    src="../assets/backward-arrow-svgrepo-com.svg" alt=""></a> 
+    <h1 class="title" >Using NixOS</h1>
+    <p class="date">2025-12-15</p>
 
 	<p>
-	Having used Linux for about 4 years now. I started with Arch, and
-	quickly realized that was a bad decision, and retreated to Fedora.
-	Fedora worked fine until I wanted to do anything with CUDA, for some
-	reason I could not get this to work consistently, and out of
-	frustration switched to Pop OS. Pop OS was the first time I felt
-	comfortable installing and updating, feeling like most essential
-	software would not break.
 
+		I have used Linux for about 4 years now, I started with Arch, and
+		quickly realized that had too steep of a learning curve for a
+		mere psychology student, and thus retreated to Fedora. Fedora
+		worked fine until I wanted to do anything with CUDA, for some
+		reason I could not get this to work consistently, and out of
+		frustration switched to Pop OS. Not only did Pop OS handle
+		Nvidia's driver hell flawlessly, it also felt a lot more robust
+		to my tinkering. Of course this might simply be because my
+		tinkering became less destructive, but I would like to give Pop
+		OS some credit for never completely breaking on me.
 
-
-	<p>
-	Pop OS was working well, until I got a new desktop. Now every time I
-	installed a new package or program, there would be a difference between
-	my laptop and desktop. Furthermore, as I started to branch out of
-	simple python development and integrate multiple languages I noticed 
-	programs would fail to run on other machines. This later issue might
-	be fixed by using something like Docker, but in my never ending yearning
-	to change my computing environments I wanted something more. I wanted to 
-	know about every program installed on my computer. I wanted to run NixOS
 	</p>
 
-	Now 
+
+
+	<p>
+
+		While Pop OS was working well, when I got a new desktop every time I
+		installed a new package or program, there would be a difference
+		between my laptop and desktop. Furthermore, as I started to
+		branch out of simple python development and integrate multiple
+		languages I noticed programs would fail to run on other
+		machines. This later issue might be fixed by using something
+		like Docker, but in my never ending yearning to change my
+		computing environments I wanted something more. I wanted
+		something like arch, allowing me to know exactly what kind of
+		protocols I was running, but in a way that let me reproduce my
+		environments easily. I wanted to run NixOS.
+	</p>
+	<p>
+    
+		Now I have been using NixOS for about a month on my laptop, and
+		recently installed in on my Desktop as well as an old laptop
+		which I intend to repurpose as a server. I can confidently say
+		that NixOS gave me everything I asked for, but I may have not
+		realized what this entailed. At a first glance it really is
+		perfect, it allows me to experiment with different desktop
+		environments I can easily set up a new computer simply by ssh's
+		into it and coping over my configuration files. And using nix
+		dev-shells I am effectively never in a situation where my
+		program works on my laptop but not on my computer. 
+	</p>
+	
+	<p>
+		Possible the biggest benefit is the stability of the system. By this I do not mean that updates can't break your system. Instead you simply do not have to worry about this. If you use <a href="https://nixos.wiki/wiki/flakes">nix flakes</a> to manage your package versions and track these files using Git, updating your systems becomes as easy as running 
+
+
+		<code class="block">
+nix flake update
+sudo nixos-rebuild switch --flake /etc/nixos#YOURHOST
+		</code>
+
+		inside your <code>/etc/nixos/</code> folder. If the rebuild
+		fails, or you notice some program somehow stopped working, you
+		simply reset using
+
+		<code class="block">
+git reset flake.lock
+		</code>
+
+		and now your rebuilds will be using the old versions again! 
+	
+	<p>
+
+		This is where the fun stops, and the learning curve kicks in.
+		As NixOS is not FHS compliant (a term I had not heard of until
+		I looked into NixOS), many programs will either be slightly
+		confused, or very confused. Slightly confused programs can
+		easily be helped by either manually pointing to a correct path.
+		When programs find themselves in a more distressing state, you
+		might have to run them in a dev shell, possibly enabling  <a
+			href="https://ryantm.github.io/nixpkgs/builders/special/fhs-environments/">NixOS'
+			FHS mode</a>. In my testing this has been sufficient
+		as I have gotten everything I needed to working using either
+		methods.
+
+	</p>
+
+	<p>
+
+		Now come two small recommendations for people new to NixOS.
+		Firstly, if you want a general python environment that is
+		robust and lets you install packages without using Nix OS' pre
+		packed python packages. I would recommend using <a
+			href="https://docs.astral.sh/uv/">uv</a> this is a
+		popular package manager for python, that is faster than pip,
+		though I imagine simply using a virtual environment using pip
+		might also work. uv can be installed through the Nix OS package manager.
+
+	</p>
+
+	<p>
+
+		Once you have uv installed, we will need to set up our shell.
+		For this we first create a virtual environment in uv using 
+
+	</p>
+	<p>
+		<code class="block">uv create venv</code>
+
+	</p>
+	<p>
+		Once we have setup our environemnt, we can make this our default environment using 
+		
+	</p>
+	<p>
+		<code class="block">source .venv/bin/activate.{$SHELL}</code>
+
+	</p>
+	<p>
+
+		As I am using the <a href="https://fishshell.com/">fish</a>
+		shell, this means that I source the <code
+		>.venv/bin/activate.fish</code> file. Now that we have a uv
+		manager virtual environment, we are almost done. This
+		environemnt will now work fine for simple python scripts and
+		maybe even install very simple packages, but it will fail
+		terribly when trying to install packages like
+		<code>NumPy</code>, as these rely on shared object files. These
+		are pre-compiled files (usually c/c++) that <code>NumPy</code>
+		expects to find on your system in order to work. As far as I
+		understand this is simply a way to reduce the size of the
+		binaries. For this we will be manually setting the locations of
+		these binaries in our shell. In general this looks like the
+		following:
+
+	</p>
+	<p>
+		<code class="block">export LD_LIBRARY_PATH=${pkgs.stdenv.cc.cc.lib}/lib:${pkgs.ncurses5}/lib64</code>
+
+	</p>
+	<p>
+		This example adds clib and ncurses to the
+		<code>LD_LIBRARY_PATH</code>, which should be enough to install
+		<code>NumPy</code> using
+
+	</p>
+	<p>
+		<code class="block">uv pip install numpy</code>
+	</p>
+	
+	<p>
+		Now finally, we need to make sure this happens every time we
+		open a new shell. Of course we could does this using a plain
+		<code>.bashrc</code> file- or in my case a
+		<code>config.fish</code> file. But we can let Nix handle this
+		for us. using something like 
+	</p>
+	<p>
+		<code class="block">
+programs.fish = {
+	enable = true;
+	interactiveShellInit = ''
+		source .venv/bin/activate.fish
+		export LD_LIBRARY_PATH=${pkgs.stdenv.cc.cc.lib}/lib:${pkgs.ncurses5}/lib
+	   ''; 
+	};
+		</code>
+	</p>
+
+
+	<p>
+
+		Now this was quite a lot of effort to simply get python
+		working. But it has also thought me many things that a regular
+		OS would not. I have managed to get larger more complicated
+		projects with dependencies such as PyTorch to work, by using
+		development shells. And in general I found NixOS to run
+		everything I throw at it, the trade of being that it is often a
+		headache to get working, often disregarding the NixOS way - as
+		we did in this approach to a general python environment. As for
+		if I can recommend NixOS to others, I am not completely sure.
+		It does require the type of person that not only likes to
+		tinker, but also has the time to make the computer work. If you
+		are such a person you will likely enjoy the feeling of
+		completely stress free updates, full control over your system,
+		and easy synchronization of systems.
+
+	</p>
 
 
 
-	<small>&copy 2025 Amir Sahrani</small>
+
+    <small>&copy 2025 Amir Sahrani</small>
 </body>

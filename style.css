@@ -21,8 +21,18 @@ small {
   src: url(./assets/fonts/Iosevka-Regular.ttc); /* url of the font */
 }
 
+.block{
+
+    display: block;
+    overflow-x: auto;
+    white-space: pre;
+    word-wrap: normal;
+    padding-left: 1em;
+}
+
 code {
-    font-family: Iosevka;
+    font-family: 'Iosevka', monospace;
+    background: #40826d1a;
 }
 
 img {
@@ -72,6 +82,11 @@ h1 {
     font-size: 30px;
     color : #40826d;
     transition: all 0.2s;
+}
+
+.date {
+    margin-top: -50px;
+    color: #100c08;
 }
 
 h1:hover {
