@@ -1,0 +1,182 @@
+<head>
+<link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css"/>
+<link rel="stylesheet" href="../style.css"/>
+<link rel="icon" href="../assets/favicon.ico"/>
+<title>Amir Sahrani</title>
+
+</head> <body> <div> <a href="../blog.html"> <img class="back"
+    src="../assets/backward-arrow-svgrepo-com.svg" alt=""></a> 
+    <h1 class="title" >Using NixOS, and becoming friends with my computer again</h1>
+    <p class="date">2025-12-15</p>
+
+	<p>
+		Originially I set out to write about my experiences moving to
+		NixOS and the struggles of managing a non FHS-compliant sytem,
+		knowing what FHS even is. Admittedly this might have been a
+		warning sign and I should have maybe tried another Linux
+		distribution. But unlike my first experience with Linux being
+		on Arch, this time with NixOS I decided that it was worth
+		learning the system, and more importantly, that I am able to do
+		so in reasonable time.
+	</p>
+
+	<p>
+
+		After 800 pages and some considerable procrastination I decided
+		I did not want to write a long technical piece on how to deal
+		with various challenges in setting up NixOS. Any 
+		issues I've had are much better dealt with by the NixOS wiki,
+		or in some cases the excellent Arch wiki. And any code snippets
+		I have written for my specific use case are unlikely to be so
+		general as to be useful for random people. NixOS is a very
+		flexible distribution after all.
+
+	</p>
+
+	
+	<p>
+
+		<!-- As a result this article is meant to as a  -->
+	</p>
+
+	<h2>How did we get here?</h2>
+	<p>
+
+		I have used Linux for about 4 years now, I started with Arch, and
+		quickly realized that had too steep of a learning curve for a
+		mere psychology student, and thus retreated to Fedora. Fedora
+		worked fine until I wanted to do anything with CUDA, for some
+		reason I could not get this to work consistently, and out of
+		frustration switched to Pop OS. Not only did Pop OS handle
+		Nvidia's driver hell flawlessly, it also felt a lot more robust
+		to my tinkering. Of course this might simply be because my
+		tinkering became less destructive, but I would like to give Pop
+		OS some credit for never completely breaking on me. 
+
+	</p>
+
+	<h2>Why NixOS?</h2>
+
+	<p>
+
+		Pop OS worked just fine, so if it wasn't broken, what did I
+		need to fix? Technically nothing, my system worked, I could get
+		the code that I wrote different machines to work by using tools
+		such as `uv`, and I had my shell scripts and aliases git
+		synced. That being said, the programs I had on different
+		machines were not always synced. This resulted in some
+		frustration when working on my laptop and finding out that it
+		did not have the programs I expected. Furthermore, I wanted to
+		experiment with different desktop environments, specifically 
+		infinite horizontal scrolling using Niri. The Gnome extension
+		designed to simulate this effect simply did not do.
+		
+	</p>
+
+	<p>
+		Having laid out my reasons for switching, I decided NixOS not 
+		only was capable of supplying everything I wanted. It also was 
+		flexible enough to allow me to change my desktop environments
+		whenever I wanted. 
+	</p>
+
+	<p>
+
+		Now, after about 4 months of using NixOS, I would not dare to
+		say that this was an easy switch, it was however basically what
+		I wanted. Not only that, it has given me a feeling I have never
+		really experienced with a computer. That being the completely
+		boring, and stress-free updates.
+
+	</p>
+
+	<h2>How refreshing</h2>
+	<p>
+
+		Usually updating anything is either exciting, or infuriating.
+		Updating your phone? Better hope that the new Android/IOS
+		version has made previous functionality harder to get to!
+		Updating your Windows machine? Let's see what security holes are
+		introduces! And also more Ads! 'Updating' a code base? Better hope that 
+		your dependencies don't make the SAT solver sad. 
+	</p>
+
+	<p>
+
+		As much as I would like to pretend updates on Linux are better, it
+		really is not. The likelihood of functionality being
+		removed/obfuscated is smaller, but in my experience the
+		likelihood of a random <code>sudo apt upgrade</code> finishing
+		successfully is less than ideal...
+
+	</p>
+
+	<p>
+		This is where NixOS shines. Firstly, since the entire system
+		is configured in plain <code>.nix</code> files, your entire
+		system's specification can be tracked using git. So when it
+		comes to updating, if an update fails, you can simply revert to
+		the previous version without any issues. If you have time, it
+		might then be a good idea to figure out why it is failing, and
+		in the case of a singular program causing this failure, to
+		temporarily disable it.
+	</p>
+
+	<p>
+		Finally, NixOS makes the installation and setup of many programs almost trivially easy. For example, enabling Bluetooth is as simple as:
+
+		<p>
+			<code>
+			  hardware.bluetooth.enable = true;
+			</code>
+		</p>
+
+		For programs such as <code>ssh</code>, NixOS even handles the
+		<code>systemctl</code> entries for you! Combined with the extremely
+		large number of packages supported by the nix package manager, I have
+		pretty much every program I use declared in a nix file.
+
+	</p>
+
+	<h2>However...</h2>
+	<p>
+		NixOS has been great, and yet another way in which I have been able 
+		to learn more about my computing environment. This all this learning
+		was mostly because things often did not work straight out of the box.
+	</p>
+	<p>
+
+		Things often break, and the only reason this is not a
+		dealbreaker, is because breaking is often not disastrous.
+		Setting up coding environments can be extremely in convenient,
+		especially as the number of dependencies grow (looking at you
+		<code>PyTorch</code>). NixOS also feels a lot less transparent
+		than something like Arch or even regular Ubuntu, this is might
+		be mostly because of inexperience, but the location of
+		important files, and the machinery of installations and updates
+		are often still foreign to me.
+
+	</p>
+
+
+	<h2>For good</h2>
+
+	<p>
+
+		I hope to be using NixOS for a long time, even with the
+		numerous drawbacks, it is an elegant solution to problems I had
+		using multiple machines, and is about as close to a
+		distribution like Arch I want to be using. But more importantly than these 
+		problems, NixOS makes me feel more in control of and at peace with my 
+		computers. A feeling I sadly do not feel with (m)any other computers.
+
+	</p>
+
+
+
+
+
+
+
+    <small>&copy 2025 Amir Sahrani</small>
+</body>
