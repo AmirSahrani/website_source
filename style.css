@@ -1,18 +1,52 @@
+/* 
+var(--green, #40826d)
+var(--pink, #BA5B7C)
+var(--gray-green, #7a8280)
+var(--text-black, #100c08)
+var(--background, #f0f0f0)
+*/
+
+
+:root{
+--greenish: #40826d;
+--pink: #BA5B7C;
+--gray-green: #7a8280;
+--text-black: #100c08;
+--background: #f0f0f0;
+}
+
+
+
+
+
+.index-body {
+    border-left: 5px double var(--greenish);
+    transition: all 0.2s;
+}
+
+.index-body:hover {
+    border-left: 5px double var(--pink);
+    transition: all 0.2s;
+}
+
+
 body {
     font-family: main;
     font-weight:400;
+    font-size: 22px;
     width: 700px;
     margin: auto;
     position: relative;
-    padding: 0 20px;
-    background: #f0f0f0 ;
-    color: #100c08;
-    font-size: 20px;
+    padding: 0 10px;
+    background: var(--background) ;
+    color: var(--text-black);
     line-height: 28px;
     margin-top: 35px;
     margin-bottom: 35px;
 
+
 }
+
 
 @font-face {
   font-family: main; /* set name */
@@ -20,7 +54,7 @@ body {
 }
 small {
     font-size: 12px;
-    color: #7a8280;
+    color: var(--gray-green);
 }
 @font-face {
   font-family: Iosevka; /* set name */
@@ -48,7 +82,7 @@ small {
 
 code {
     font-family: 'Iosevka', monospace;
-    background: #40826d1a;
+    background: var(--greenish)1a;
 }
 
 img {
@@ -93,28 +127,28 @@ img {
 
 }
 
-.title{
-
+#home_name{
     font-size: 60px;
+    text-align: right;
 }
 
 h1 {
     font-family: Justus-bold;
     margin-top: 50px;
-    margin-bottom: 65px;
+    margin-bottom: 15px;
     line-height: 50px;
-    font-size: 40px;
-    color : #40826d;
+    font-size: 60px;
+    color : var(--greenish);
     transition: all 0.2s;
 }
 
 .date {
-    margin-top: -50px;
-    color: #7a8280;
+    text-align: right;
+    color: var(--gray-green);
 }
 
 h1:hover {
-    color : #BA5B7C;
+    color : var(--pink);
     transition: all 0.2s;
 }
 
@@ -122,13 +156,13 @@ h2 {
     font-family: Justus-it;
     margin-top: 30px;
     margin-bottom: 10px;
-    font-size: 24px;
-    color : #BA5B7C;
+    font-size: 28px;
+    color : var(--pink);
 }
 
 
 .desc {
-    border-left : 2px solid #40826d;
+    border-left : 2px solid var(--greenish);
     padding-left: 3px;
     margin-left: -3px;
     height:  auto;
@@ -137,7 +171,7 @@ h2 {
 }
 
 .desc:hover {
-    border-left : 3px solid #BA5B7C;
+    border-left : 3px solid var(--pink);
     padding-left: 3px;
     margin-left: -4px;
     height:  auto;
@@ -152,27 +186,27 @@ p {
 }
 
 a:link{
-    color: #100c08;
+    color: var(--text-black);
     text-decoration: underline; 
     text-decoration-thickness: 2px;
-    text-decoration-color: #40826d;
+    text-decoration-color: var(--greenish);
     transition: text-decoration-color 0.2s;
     text-underline-offset: 2px;
 }
 
 a:visited{
-    color: #100c08;
+    color: var(--text-black);
     text-decoration: underline; 
     text-decoration-thickness: 2px;
-    text-decoration-color: #40826d;
+    text-decoration-color: var(--greenish);
     transition: text-decoration-color 0.2s;
     text-underline-offset: 2px;
 }
 a:hover{
-    color: #100c08;
+    color: var(--text-black);
     text-decoration: underline; 
     text-decoration-thickness: 3px;
-    text-decoration-color: #BA5B7C;
+    text-decoration-color: var(--pink);
     transition: text-decoration-color 0.2s;
     text-underline-offset: 3px;
 }
@@ -212,7 +246,7 @@ a:hover{
     height: 120px;
     left: -100px;
     top: -15px;
-    border-radius: 50%;
+    border-radius: 4%;
 }
 
 @media (max-width: 480px){
