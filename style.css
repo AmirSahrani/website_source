@@ -114,7 +114,7 @@ h1 {
 }
 
 h1:hover {
-    color : #bf7d92;
+    color : #BA5B7C;
     transition: all 0.2s;
 }
 
@@ -123,7 +123,7 @@ h2 {
     margin-top: 30px;
     margin-bottom: 10px;
     font-size: 24px;
-    color : #bf7d92;
+    color : #BA5B7C;
 }
 
 
@@ -137,7 +137,7 @@ h2 {
 }
 
 .desc:hover {
-    border-left : 3px solid #bf7d92;
+    border-left : 3px solid #BA5B7C;
     padding-left: 3px;
     margin-left: -4px;
     height:  auto;
@@ -172,15 +172,15 @@ a:hover{
     color: #100c08;
     text-decoration: underline; 
     text-decoration-thickness: 3px;
-    text-decoration-color: #bf7d92;
+    text-decoration-color: #BA5B7C;
     transition: text-decoration-color 0.2s;
     text-underline-offset: 3px;
 }
 
 .back-container {
     position: absolute;
-    width: 100px; /* Fixed width to prevent flickering */
-    height: 60px; /* Fixed height to prevent flickering */
+    width: 100px; 
+    height: 60px; 
     left: -100px;
     display: block;
 }
