@@ -197,11 +197,11 @@ a:hover{
 .back:hover {
     border: none;
     position: absolute;
+    filter: invert(63%) sepia(11%) saturate(1275%) hue-rotate(290deg) brightness(88%) contrast(81%);
     width: 90px;
     height: 60px;
-    left: -90px;
-    right: -10px;
-    transition: all 0.2s;
+    left: -100px;
+    transition: all 0.1s;
 }
 
 .avatar {
