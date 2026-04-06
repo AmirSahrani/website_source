@@ -49,7 +49,9 @@ body {
 
 
 
-list-style:
+ul li{
+     padding: 2;
+}
 
 @font-face {
   font-family: main; /* set name */
