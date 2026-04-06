@@ -10,7 +10,7 @@
     <p class="date">2025-12-15</p>
 
 	<p>
-		Originially I set out to write about my experiences moving to
+		Originally, I set out to write about my experiences moving to
 		NixOS and the struggles of managing a non FHS-compliant sytem,
 		knowing what FHS even is. Admittedly this might have been a
 		warning sign and I should have maybe tried another Linux
@@ -22,7 +22,7 @@
 
 	<p>
 
-		After 800 pages and some considerable procrastination I decided
+		After 800 words and some considerable procrastination I decided
 		I did not want to write a long technical piece on how to deal
 		with various challenges in setting up NixOS. Any 
 		issues I've had are much better dealt with by the NixOS wiki,
@@ -32,12 +32,7 @@
 		flexible distribution after all.
 
 	</p>
-
 	
-	<p>
-
-		<!-- As a result this article is meant to as a  -->
-	</p>
 
 	<h2>How did we get here?</h2>
 	<p>
@@ -60,16 +55,16 @@
 	<p>
 
 		Pop OS worked just fine, so if it wasn't broken, what did I
-		need to fix? Technically nothing, my system worked, I could get
-		the code that I wrote different machines to work by using tools
-		such as `uv`, and I had my shell scripts and aliases git
-		synced. That being said, the programs I had on different
-		machines were not always synced. This resulted in some
-		frustration when working on my laptop and finding out that it
-		did not have the programs I expected. Furthermore, I wanted to
-		experiment with different desktop environments, specifically 
-		infinite horizontal scrolling using Niri. The Gnome extension
-		designed to simulate this effect simply did not do.
+		need to fix? Technically nothing, my system worked, code I
+		wrote worked on all my machines when using tools such as `uv`,
+		and I had my shell scripts and aliases synced through a git
+		repo. That being said, the programs I had on different machines
+		were not always synced. This resulted in some frustration when
+		working on my laptop and finding out that it did not have the
+		programs I expected. Furthermore, I wanted to experiment with
+		different desktop environments, specifically infinite
+		horizontal scrolling using Niri. The Gnome extension designed
+		to simulate this effect simply did not work well.
 		
 	</p>
 
@@ -84,9 +79,8 @@
 
 		Now, after about 4 months of using NixOS, I would not dare to
 		say that this was an easy switch, it was however basically what
-		I wanted. Not only that, it has given me a feeling I have never
-		really experienced with a computer. That being the completely
-		boring, and stress-free updates.
+		I wanted. Not only that, it has made updates completely
+		boring, and stress-free.
 
 	</p>
 
@@ -94,26 +88,25 @@
 	<p>
 
 		Usually updating anything is either exciting, or infuriating.
-		Updating your phone? Better hope that the new Android/IOS
-		version has made previous functionality harder to get to!
+		Updating your phone? Better hope that the new improvements have not 
+		removed or hidden any of your favorite features.
 		Updating your Windows machine? Let's see what security holes are
-		introduces! And also more Ads! 'Updating' a code base? Better hope that 
+		introduced! And also more Ads! 'Updating' a code base? Better hope that 
 		your dependencies don't make the SAT solver sad. 
 	</p>
 
 	<p>
-
 		As much as I would like to pretend updates on Linux are better, it
 		really is not. The likelihood of functionality being
 		removed/obfuscated is smaller, but in my experience the
 		likelihood of a random <code>sudo apt upgrade</code> finishing
-		successfully is less than ideal...
+		successfully is not great...
 
 	</p>
 
 	<p>
 		This is where NixOS shines. Firstly, since the entire system
-		is configured in plain <code>.nix</code> files, your entire
+		is configured in plain <code>.nix</code> files and one <code>.lock file</code>, your entire
 		system's specification can be tracked using git. So when it
 		comes to updating, if an update fails, you can simply revert to
 		the previous version without any issues. If you have time, it
@@ -141,19 +134,20 @@
 	<h2>However...</h2>
 	<p>
 		NixOS has been great, and yet another way in which I have been able 
-		to learn more about my computing environment. This all this learning
+		to learn more about my computing environment. But all this learning
 		was mostly because things often did not work straight out of the box.
 	</p>
+
 	<p>
 
 		Things often break, and the only reason this is not a
 		dealbreaker, is because breaking is often not disastrous.
-		Setting up coding environments can be extremely in convenient,
+		Setting up coding environments can be extremely inconvenient,
 		especially as the number of dependencies grow (looking at you
 		<code>PyTorch</code>). NixOS also feels a lot less transparent
 		than something like Arch or even regular Ubuntu, this is might
 		be mostly because of inexperience, but the location of
-		important files, and the machinery of installations and updates
+		important files, and the machinery of installations
 		are often still foreign to me.
 
 	</p>
@@ -162,21 +156,13 @@
 	<h2>For good</h2>
 
 	<p>
-
 		I hope to be using NixOS for a long time, even with the
 		numerous drawbacks, it is an elegant solution to problems I had
 		using multiple machines, and is about as close to a
 		distribution like Arch I want to be using. But more importantly than these 
-		problems, NixOS makes me feel more in control of and at peace with my 
-		computers. A feeling I sadly do not feel with (m)any other computers.
-
+		problems, NixOS makes me feel more in control of, and at peace with, my 
+		computers. A feeling I sadly do not feel with (m)any other devices.
 	</p>
-
-
-
-
-
-
 
     <small>&copy 2025 Amir Sahrani</small>
 </body>

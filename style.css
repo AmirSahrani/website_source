@@ -48,6 +48,9 @@ body {
 }
 
 
+
+list-style:
+
 @font-face {
   font-family: main; /* set name */
   src: url(./assets/fonts/Lora-VariableFont_wght.ttf); /* url of the font */
@@ -79,7 +82,9 @@ small {
     word-wrap: normal;
     padding-left: 1em;
 }
-
+.footnote-ref{
+    font-size=12px;
+}
 code {
     font-family: 'Iosevka', monospace;
     background: var(--greenish)1a;
