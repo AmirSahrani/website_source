@@ -86,7 +86,10 @@ small {
     padding-left: 1em;
 }
 .footnote-ref{
-    font-size=12px;
+  vertical-align: super; /* 2 */
+  font-size: 0.7em; /* 3 */
+  margin-left: 2px; /* 4 */
+  text-decoration: underline; /* 5 */
 }
 code {
     font-family: 'Iosevka', monospace;
@@ -140,6 +143,10 @@ img {
     text-align: right;
 }
 
+
+ol {
+    padding-left: 10px;
+}
 h1 {
     font-family: Justus-bold;
     margin-top: 50px;
