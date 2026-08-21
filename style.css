@@ -275,4 +275,7 @@ a:hover{
     .avatar {
 	display: none;
     }
+    p {
+	text-align: justify;
+    }
 }
