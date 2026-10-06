@@ -12,7 +12,7 @@ var(--background, #f0f0f0)
 	--pink: #BA5B7C;
 	--gray-green: #7a8280;
 	--text-black: #100c08;
-	--background: #FFEFE4;
+	--background: #fbf6e4;
 }
 
 
@@ -294,11 +294,12 @@ a:hover {
 	border-radius: 4%;
 }
 
-@media (max-width: 900px){
-    .avatar {
-	display: none;
-    }
-    p {
-	text-align: justify;
-    }
+@media (max-width: 900px) {
+	.avatar {
+		display: none;
+	}
+
+	p {
+		text-align: justify;
+	}
 }
